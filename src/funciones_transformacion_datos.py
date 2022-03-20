@@ -78,3 +78,12 @@ def cutrez (data, col1, col2, col3, col4, col5, col6, val1, val2, val3, val4, va
 def play_rate_total (data, col1, col2, col3, col4, col5, col6):
   for i in data.index:
     data.loc[i, col1] = campeones.loc[i, col2] + campeones.loc[i, col3] + campeones.loc[i, col4] + campeones.loc[i, col5] + campeones.loc[i, col6]
+
+def incremento (celda):
+  valor = celda * 17
+  return valor
+
+def totales (base, incremento):
+  for ir in range (0, 145):
+    total = base + incremento
+    return total
