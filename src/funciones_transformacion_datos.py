@@ -8,6 +8,9 @@ Original file is located at
 """
 
 def extraer_top (celda):
+
+'''Esta función sigue los pasos para dividir el contenido de la celda "Play Rate" de forma que vayanos iterando y extraigamos el valor numérico contenido dentro de ella para cada posición, en este caso para el TOP. De entrada solamente tendrá el valor de cada celda y ella seguirá los pasos para su limpieza'''
+
     iter2 = celda.split(",")
     iter3 = iter2[0]
     iter4 = iter3.replace("<", "") and iter3.replace(">", "") and iter3.replace("{<", "")
@@ -19,6 +22,9 @@ def extraer_top (celda):
     return iter9
 
 def extraer_jungla (celda):
+
+'''Esta función sigue los pasos para dividir el contenido de la celda "Play Rate" de forma que vayanos iterando y extraigamos el valor numérico contenido dentro de ella para cada posición, en este caso para el Jungla. De entrada solamente tendrá el valor de cada celda y ella seguirá los pasos para su limpieza'''
+
     iter2 = celda.split(",")
     iter3 = iter2[1]
     iter4 = iter3.replace("<", "") and iter3.replace(">", "")
@@ -30,6 +36,9 @@ def extraer_jungla (celda):
     return iter9
 
 def extraer_mid (celda):
+
+'''Esta función sigue los pasos para dividir el contenido de la celda "Play Rate" de forma que vayanos iterando y extraigamos el valor numérico contenido dentro de ella para cada posición, en este caso para el MID. De entrada solamente tendrá el valor de cada celda y ella seguirá los pasos para su limpieza'''
+
     iter2 = celda.split(",")
     iter3 = iter2[2]
     iter4 = iter3.replace("<", "") and iter3.replace(">", "")
@@ -41,6 +50,9 @@ def extraer_mid (celda):
     return iter9
 
 def extraer_adc (celda):
+
+'''Esta función sigue los pasos para dividir el contenido de la celda "Play Rate" de forma que vayanos iterando y extraigamos el valor numérico contenido dentro de ella para cada posición, en este caso para el ADC. De entrada solamente tendrá el valor de cada celda y ella seguirá los pasos para su limpieza'''
+
     iter2 = celda.split(",")
     iter3 = iter2[3]
     iter4 = iter3.replace("<", "") and iter3.replace(">", "")
@@ -52,6 +64,9 @@ def extraer_adc (celda):
     return iter9
 
 def extraer_support (celda):
+
+'''Esta función sigue los pasos para dividir el contenido de la celda "Play Rate" de forma que vayanos iterando y extraigamos el valor numérico contenido dentro de ella para cada posición, en este caso para el Support. De entrada solamente tendrá el valor de cada celda y ella seguirá los pasos para su limpieza'''
+
     iter2 = celda.split(",")
     iter3 = iter2[4]
     iter4 = iter3.replace("<", "") and iter3.replace(">", "") and iter3.replace("}", "")
@@ -63,6 +78,9 @@ def extraer_support (celda):
     return iter9
 
 def cutrez (data, col1, col2, col3, col4, col5, col6, val1, val2, val3, val4, val5):
+
+''' En esta función lo que hacemos es comparar todos los valores entre cinco columnas para, posteriormente, en función de cual sea el mayor, asignarle un valor único en cada caso. Para ello, deberemos seleccionar en los parámetros de entrada el dataframe sobre el cual vamos a aplicar este análisis, las columnas sobre las cuales vamos a hacer esta comparación con sus valores correspondientes para añadir en la última columna que indicamos para visualizar el resultado de esta comparación'''
+
   for i in data.index:
     if (data[col1][i]) > (data[col2][i]) and (data[col1][i]) > (data[col3][i]) and (data[col1][i]) > (data[col4][i]) and (data[col1][i]) > (data[col5][i]):
       data.loc[i, col6]=val1
@@ -76,14 +94,23 @@ def cutrez (data, col1, col2, col3, col4, col5, col6, val1, val2, val3, val4, va
       data.loc[i, col6]=val5
 
 def play_rate_total (data, col1, col2, col3, col4, col5, col6):
+
+'''En esta función lo que hacemos es sumar el valor de seis columnas y acumularlo en una distinta. Un sumatorio en toda regla. Para ello, en los parámetros de entrada elegiremos el dataframe sobre el cual aplicar esto así como las columnas a sumar y la columna donde mostrar el resultado'''
+
   for i in data.index:
-    data.loc[i, col1] = campeones.loc[i, col2] + campeones.loc[i, col3] + campeones.loc[i, col4] + campeones.loc[i, col5] + campeones.loc[i, col6]
+    data.loc[i, col1] = data.loc[i, col2] + data.loc[i, col3] + data.loc[i, col4] + data.loc[i, col5] + data.loc[i, col6]
 
 def incremento (celda):
+
+'''Esta función la encontramos para encontrar el incremento total de una estadística a nivel 18. Por ello, al incremento unitario por nivel que es lo que introducimos como parámetro de entrada (valor de cada celda) lo multiplicamos por 17'''
+
   valor = celda * 17
   return valor
 
 def totales (base, incremento):
+
+'''En esta función sumamos el valor base y el del incremento calculado con la función incremento para poder tener el total del campeón a nivel 18. De esta manera, solo tenemos que incluir en los parámetros de entrada el valor base y el valor incremental y nos devolverá el total para el rango seleccionado (el del total de campeones en este caso)'''
+
   for ir in range (0, 145):
     total = base + incremento
     return total

@@ -8,9 +8,11 @@ Original file is located at
 """
 
 def get_champions():
-    champions = champions(region="EUW")
-    for champion in champions:
-        print(champion.name, champion.id)
+  champions = champions(region="EUW")
+  for champion in champions:
+    print(champion.name, champion.id)
+
+'''Extracción inicial de campeones de la API de Riot. Solo seleccionamos la región y sacamos el nombre y el ID de cada campeón para ver qué nos devuelve de forma inicial. Sin parámetros de entrada'''        
 
 def extraer_campeones (lista, dicc):
   for campeon in lista:
@@ -65,3 +67,5 @@ def extraer_campeones (lista, dicc):
       dicc["Ban Rate"].append("NS/NC")
     else:      
       dicc["Ban Rate"].append(name_.ban_rates)
+
+'''Extraemos los datos e información que necesitamos de cada campeón desde la API de Riot. Para ello, para cada dato a extraer, vamos preguntado si es un valor vacío o no, de forma que añada "NS/NC" en caso de ser así o que extraiga el valor correspondiente en caso de existir. Así nos aseguramos de que no nos de error la API en caso de ir a devolver un valor vacío o no existir. Una vez pasamos esta disyuntiva, agregamos el valor correspondiente a cada key del diccionario vacío que hemos creado previamente y que nos permitirá general el dataframe que necesitamos a posteriori. Como parámetros de entrada tenemos la lista por la cual vamos a iterar y el diccionario al cual vamos a appendear los valores extraídos desde la API'''
