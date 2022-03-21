@@ -5,18 +5,12 @@
 # Objetivo
 El objetivo de este proyecto es analizar les estadísitcas de los campeones por posición y ver la lógica detrás de ellas así como estudiar las elecciones de los jugadores en función de ellas y de las posiciones.
 
-- **MID** --> Son los campeones con mayor dificultad del juego
-- **ADC** --> La gente los selecciona más que el resto debido a que son la fuente de daño de una partida junto con los mid pero tienen menor dificultad. El juego corrige esto castigándoles en sus estadísiticas base e incrementales en las mismas para equilibrarlos.
-- **TOP** --> Los menos usados del juego debido a que en el meta actual se juegan tanques y es el rol menos deseado dentro de los jugadores de LoL
-- **Dificultad** --> El juego pretende ser exigente de forma que no premia a los jugadores que escogen campeones de mayor dificultad con mejores estadísticas en los mismos sino que hace recaer todo en la skill sin dar ventajas por ello. Solo equilibra a la baja a aquellos campeones más fáciles y potentes, no equilibra por lo alto a aquellos que son más difíciles.
-- **Clasificaciones Riot** --> No hay casi relación entre la clasificación de daño mágico, daño físico que nos propone Riot (puntúa del 1 al 10 estas variables en función de lo enfocado que está a una cosa u otra el campeón) y las estadísticas de cada campeón lo que nos hace ver que todo depende de los objetos y del escalado de habilidades con lo que hace que todo dependa de la habilidad de los jugadores. No es así para los tanques, los cuales sí que tienen un aumento y crecimiento de estadísitcas mayor que ayuda a desempeñar su labor. El juego quiere que si quieres ganar la partida, muestres una mayor habilidad que el rival. Competitivo
-
 # Working plan 
 
 ![workingflow]
 (https://www.sneakerlost.es/hubfs/Como-influir-en-el-proceso-de-compra-industrial-02.png?noresize)
 
-Lo primero que he hecho ha sido entrar en kaggle para buscar una base de datos sobre campeones de League of Legends que pudiera aportarme datos para iniciar este análisis..
+Lo primero que he hecho ha sido entrar en kaggle para buscar una base de datos sobre campeones de League of Legends que pudiera aportarme datos para iniciar este análisis.
 
 Tras ello, me descargo de la API de Riot los datos para sus campeones, conteniendo información de win, ban y play rates así como clasificaciones al respecto de sus usos dados los cuales podré estudiar y comparar con las estadísticas que me puede aportar mis datos originales.
 
@@ -51,6 +45,14 @@ La estructura del proyecto entregado es la siguiente:
 
     a) **champions-stats** --> .csvs originales de los cuales extraemos las estadísticas de los campeones
     b) **campeones** --> .csvs generados como output de nuestro trabajo y desarrollo del proyecto
+
+### CONCLUSIONES
+
+- **MID** --> Son los campeones con mayor dificultad del juego
+- **ADC** --> La gente los selecciona más que el resto debido a que son la fuente de daño de una partida junto con los mid pero tienen menor dificultad. El juego corrige esto castigándoles en sus estadísiticas base e incrementales en las mismas para equilibrarlos.
+- **TOP** --> Los menos usados del juego debido a que en el meta actual se juegan tanques y es el rol menos deseado dentro de los jugadores de LoL
+- **Dificultad** --> El juego pretende ser exigente de forma que no premia a los jugadores que escogen campeones de mayor dificultad con mejores estadísticas en los mismos sino que hace recaer todo en la skill sin dar ventajas por ello. Solo equilibra a la baja a aquellos campeones más fáciles y potentes, no equilibra por lo alto a aquellos que son más difíciles.
+- **Clasificaciones Riot** --> No hay casi relación entre la clasificación de daño mágico, daño físico que nos propone Riot (puntúa del 1 al 10 estas variables en función de lo enfocado que está a una cosa u otra el campeón) y las estadísticas de cada campeón lo que nos hace ver que todo depende de los objetos y del escalado de habilidades con lo que hace que todo dependa de la habilidad de los jugadores. No es así para los tanques, los cuales sí que tienen un aumento y crecimiento de estadísitcas mayor que ayuda a desempeñar su labor. El juego quiere que si quieres ganar la partida, muestres una mayor habilidad que el rival. Competitivo
 
 #Librerías
 
