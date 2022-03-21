@@ -1,6 +1,6 @@
 # SE-LIA
 ![portada]
-(https://cdn1.dotesports.com/wp-content/uploads/sites/4/2021/06/04184934/league-of-legends-champions-1.jpg)
+(https://github.com/Rodrigamen/SE-LIA/blob/main/images/league-of-legends-champions-1.jpg)
 
 # Objetivo
 El objetivo de este proyecto es analizar les estadísitcas de los campeones por posición y ver la lógica detrás de ellas así como estudiar las elecciones de los jugadores en función de ellas y de las posiciones.
@@ -8,7 +8,7 @@ El objetivo de este proyecto es analizar les estadísitcas de los campeones por 
 # Working plan 
 
 ![workingflow]
-(https://www.sneakerlost.es/hubfs/Como-influir-en-el-proceso-de-compra-industrial-02.png?noresize)
+(https://raw.githubusercontent.com/Rodrigamen/SE-LIA/main/images/Como-influir-en-el-proceso-de-compra-industrial-02.webp)
 
 Lo primero que he hecho ha sido entrar en kaggle para buscar una base de datos sobre campeones de League of Legends que pudiera aportarme datos para iniciar este análisis.
 
