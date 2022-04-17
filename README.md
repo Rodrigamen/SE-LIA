@@ -47,16 +47,23 @@ La estructura del proyecto entregado es la siguiente:
 2. Una carpeta src con las funciones usadas en los notebooks en formato .py:
 
     a) **funciones_api** --> Funciones usadas para la extracción de datos de la API
+    
     b) **funciones_transformacion_datos** --> Funciones usadas para la transformación y normalización de los datos contenidos en nuestro dataframe
+    
     c) **funciones_datos** --> Funciones usadas para la extracción y manipulación de datos en pos de mostrarlos dentro del dashboard
 
 3. Una carpeta data que contiene todos los .csvs usados en el proyecto
 
     a) **champions-stats** --> .csvs originales de los cuales extraemos las estadísticas de los campeones
+    
     b) **campeones** --> .csvs generados como output de nuestro trabajo y desarrollo del proyecto
+    
     c) **Abilites** --> .csv original con la data de las habilidades
+    
     d) **habilidades** --> .csv construido con la data de habiilidades mencionada en el anterior .csv
+    
     e) **champions** --> .csv final con toda la información necesaria de nuestros campeones
+    
     f) **normalizado** --> .csv donde almacenamos las distintas stats de los campeones normalizada entre 0 y 1 para poder construir el spiden en Tableau
     
 4. Una carpeta dashboard con el dashboard construido en Tableau
