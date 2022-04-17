@@ -16,6 +16,8 @@ Tras ello, me descargo de la API de Riot los datos para sus campeones, contenien
 
 Una vez solucionados los problemas para mergear la info del csv y de la API, pasé a la normalización de los datos en los cuales tuve que limpiar los campos de rate y crear algunas nuevas estadísticas acumuladas para poder realizar el análisis que necesito. Con todo esto extraído, limpio y creado, procedo al análisis que pretendo pintando los estudios realizados y sacando conclusiones basándome en la correlación entre los distintos campos que componen mi dataframe.
 
+Para construir el dashboard, acto seguido, extraje la información que me faltaba y la incluí en un dataframe de info definitivo. Tras ello, conseguí la info sobre las habilidades y normalicé entre 0 y 1 todas las características de los campeones para poder compararlas. Con todo esto hecho, pasé a cargar mi modelo de datos de SQL y posteriormente subirlo a Tableau para mostrar todo en el dashboard.
+
 Para realizar todo esto, he usado las siguientes fuentes:
 
 - [Kaggle] (https://www.kaggle.com/datasets/carralas/league-of-legends-champion-stats-922): para la descarga de mi .csv original con los datos estadísticos de cada campeón
@@ -35,16 +37,30 @@ La estructura del proyecto entregado es la siguiente:
     c) **Transformacion_Datos** --> Normalización y tratamiento de los datos que nos van a permitir el análisis posterior de los mismos
 
     d) **Deep_Dive_y_Visualizacion** --> Análisis en profundidad de los datos y visualización de los mismos junto con la exposición de los insights extraídos
+    
+    e) **Adaptación_Datos** --> Extracción de nuevos datos y adaptación para mostrarlos en el dashboard
+    
+    f) **Datitos_definitivos** --> últimas modificaciones antes de subir todo a SQL
+    
+    g) **Alimentamos_Tablas_SQL** --> Inclusión de todos los datos dentro del modelo de SQL
 
 2. Una carpeta src con las funciones usadas en los notebooks en formato .py:
 
     a) **funciones_api** --> Funciones usadas para la extracción de datos de la API
     b) **funciones_transformacion_datos** --> Funciones usadas para la transformación y normalización de los datos contenidos en nuestro dataframe
+    c) **funciones_datos** --> Funciones usadas para la extracción y manipulación de datos en pos de mostrarlos dentro del dashboard
 
 3. Una carpeta data que contiene todos los .csvs usados en el proyecto
 
     a) **champions-stats** --> .csvs originales de los cuales extraemos las estadísticas de los campeones
     b) **campeones** --> .csvs generados como output de nuestro trabajo y desarrollo del proyecto
+    c) **Abilites** --> .csv original con la data de las habilidades
+    d) **habilidades** --> .csv construido con la data de habiilidades mencionada en el anterior .csv
+    e) **champions** --> .csv final con toda la información necesaria de nuestros campeones
+    f) **normalizado** --> .csv donde almacenamos las distintas stats de los campeones normalizada entre 0 y 1 para poder construir el spiden en Tableau
+    
+4. Una carpeta dashboard con el dashboard construido en Tableau
+    
 
 ### CONCLUSIONES
 
