@@ -23,6 +23,7 @@ Para realizar todo esto, he usado las siguientes fuentes:
 - [Kaggle] (https://www.kaggle.com/datasets/carralas/league-of-legends-champion-stats-922): para la descarga de mi .csv original con los datos estadísticos de cada campeón
 - [Riot API] (https://developer.riotgames.com/apis): para la conexión con la API de Riot y la generación del pertinente token para conectarme a ella
 - [Cassiopeia] (https://github.com/meraki-analytics/cassiopeia): interfaz python para operar con la API de Riot + documentación para manejarla
+- [Beautiful Soup] (https://mobalytics.gg/) (https://www.leagueoflegends.com/es-es/champions/): scrapping de las mencionadas webs para poder extraer las imágenes usadas en el dashboard
 
 ### Estructura de los ficheros del proyecto
 
@@ -43,6 +44,9 @@ La estructura del proyecto entregado es la siguiente:
     f) **Datitos_definitivos** --> últimas modificaciones antes de subir todo a SQL
     
     g) **Alimentamos_Tablas_SQL** --> Inclusión de todos los datos dentro del modelo de SQL
+    
+    h) **Imágenes** --> Extracción de las imágenes usadas en el dashboard mediante web scrapping y formación de los datasets correspondientes
+
 
 2. Una carpeta src con las funciones usadas en los notebooks en formato .py:
 
@@ -51,6 +55,8 @@ La estructura del proyecto entregado es la siguiente:
     b) **funciones_transformacion_datos** --> Funciones usadas para la transformación y normalización de los datos contenidos en nuestro dataframe
     
     c) **funciones_datos** --> Funciones usadas para la extracción y manipulación de datos en pos de mostrarlos dentro del dashboard
+    
+    c) **funciones_imagenes** --> Funciones usadas para la extracción y manipulación de datos en pos de mostrarlos dentro del dashboard
 
 3. Una carpeta data que contiene todos los .csvs usados en el proyecto
 
@@ -65,6 +71,8 @@ La estructura del proyecto entregado es la siguiente:
     e) **champions** --> .csv final con toda la información necesaria de nuestros campeones
     
     f) **normalizado** --> .csv donde almacenamos las distintas stats de los campeones normalizada entre 0 y 1 para poder construir el spiden en Tableau
+    
+    g) **images** --> .csv donde se encuentran todas las rutas de las imágenes usadas en el dashboard
     
 4. Una carpeta dashboard con el dashboard construido en Tableau
     
@@ -94,3 +102,5 @@ La estructura del proyecto entregado es la siguiente:
 [matplotlib] (https://matplotlib.org/stable/users/index.html)
 
 [files] (https://colab.research.google.com/notebooks/io.ipynb)
+
+[beautiful soup] (https://beautiful-soup-4.readthedocs.io/en/latest/)
